@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog dengan Komentar Tersembunyi</title>
+    <style>
+        #komentarSection {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            display: none; 
+        }
+        
+        .komentar {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 3px;
+        }
+        
+        #toggleKomentarBtn {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        #toggleKomentarBtn:hover {
+            background-color: #454ea0;
+        }
+    </style>
+</head>
+<body>
+    <article>
+<h1> Bahaya Narkoba bagi Kehidupan</h1>
+ <p>
+Narkoba, singkatan dari narkotika, psikotropika, dan zat adiktif lainnya, merupakan bahan atau zat yang dapat memengaruhi kondisi kejiwaan dan fisik seseorang. Penggunaan narkoba tanpa pengawasan medis dapat menimbulkan berbagai dampak buruk, baik secara fisik, mental, maupun sosial.
+
+Secara fisik, narkoba dapat merusak organ tubuh seperti otak, jantung, dan hati. Secara mental, pengguna bisa mengalami gangguan kejiwaan, seperti depresi, halusinasi, dan kecemasan berlebih. Dari sisi sosial, pecandu narkoba seringkali dijauhi lingkungan, kehilangan pekerjaan, bahkan terlibat dalam tindak kriminal.
+
+Pencegahan penyalahgunaan narkoba harus dimulai dari lingkungan keluarga, sekolah, dan masyarakat. Edukasi sejak dini, dukungan emosional, serta pengawasan terhadap pergaulan sangat penting dalam membentuk generasi yang sehat dan bebas narkoba.
+
+Mari kita katakan tidak pada narkoba dan wujudkan masa depan yang cerah tanpa ketergantungan zat berbahaya.
+<h1>Ayo mulai sekarang!💚</h1></p>
+        
+        <button id="toggleKomentarBtn">Tampilkan Komentar</button>
+        
+        <section id="komentarSection">
+            <h3>Komentar</h3>
+            
+            <div class="komentar">
+                <strong>Reza</strong> - <em>15 Mei 2025</em>
+                <p>Artikel yang sangat bermanfaat, terima kasih!</p>
+            </div>
+            
+            <div class="komentar">
+                <strong>maul</strong> - <em>14 Mei 2025</em>
+                <p>Saya setuju dengan artikel ini bahaya narkoba .</p>
+            </div>
+            
+            <div class="komentar">
+                <strong>Nana</strong> - <em>13 Mei 2025</em>
+                <p>Sangat menarik artikel tersebut</p>
+            </div>
+        </section>
+    </article>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('toggleKomentarBtn');
+            const komentarSection = document.getElementById('komentarSection');
+            let komentarDitampilkan = false;
+            
+            toggleBtn.addEventListener('click', function() {
+                if (komentarDitampilkan) {
+                    komentarSection.style.display = 'none';
+                    toggleBtn.textContent = 'Tampilkan Komentar';
+                    komentarDitampilkan = false;
+                } else {
+                    komentarSection.style.display = 'block';
+                    toggleBtn.textContent = 'Sembunyikan Komentar';
+                    komentarDitampilkan = true;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
